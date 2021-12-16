@@ -36,7 +36,7 @@ export default {
         },
         yaxis: {
           title: {
-            text: 'Tempo para Identificação',
+            text: 'Tempo Médio de Execução do Estimador',
           },
         },
         markers: {
