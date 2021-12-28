@@ -16,23 +16,27 @@
     </div> -->
 
     <div class="my-body mx-5 d-flex justify-content-center mt-3">
-      <div class="row w-100">
-        <div class="col-sm" v-if="mostrarGraficoNTotalSlots">
+      <div class="row w-100" v-if="mostrarGraficoNTotalSlots">
           <GraficoNTotalSlots :series="serieNTotalSlots" />
-        </div>
-
-        <div class="col-sm" v-if="mostrarGraficoNTotalSlotsVazios">
-          <GraficoNTotalSlotsVazios :series="serieNTotalSlotsVazios" />
-        </div>
-
-        <div class="col-sm" v-if="mostrarGraficoNTotalSlotsColisao">
-          <GraficoNTotalSlotsColisao :series="serieNTotalSlotsColisao" />
-        </div>
-
-        <div class="col-sm" v-if="mostrarGraficoTempoMedioExecucao">
-          <GraficoTempoMedioExecucao :series="serieTempoMedioExecucao" />
-        </div>
       </div>
+
+    <div class="my-body mx-5 d-flex justify-content-center mt-3">
+      <div class="row w-100" v-if="mostrarGraficoNTotalSlotsVazios">
+        <GraficoNTotalSlotsVazios :series="serieNTotalSlotsVazios" />
+      </div>
+    </div>
+
+    <div class="my-body mx-5 d-flex justify-content-center mt-3">
+      <div class="row w-100" v-if="mostrarGraficoNTotalSlotsColisao">
+        <GraficoNTotalSlotsColisao :series="serieNTotalSlotsColisao" />
+      </div>
+    </div>
+
+    <div class="my-body mx-5 d-flex justify-content-center mt-3">
+      <div class="row w-100" v-if="mostrarGraficoTempoMedioExecucao">
+        <GraficoTempoMedioExecucao :series="serieTempoMedioExecucao" />
+      </div>
+    </div>
     </div>
   </div>
 </template>
@@ -171,7 +175,7 @@ export default {
         return 2048;
       } else if (nEtiquetasConcorrentes >= 2841 && nEtiquetasConcorrentes <= 5680) {
         return 4096;
-      } else if (nEtiquetasConcorrentes >= 5681 && nEtiquetasConcorrentes <= 11360) {
+      } else if (nEtiquetasConcorrentes >= 5681) {
         return 8192;
       }
 
