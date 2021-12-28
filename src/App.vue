@@ -305,7 +305,6 @@ export default {
 
         while (this.nEtiquetas <= this.maxEtiquetas) {
           while (index > 0) {
-            console.log('+++++++++', index, '++++++++');
             this.dfsa();
             // this.historico.push(['-']);
             index -= 1;
@@ -346,6 +345,7 @@ export default {
           index = this.nRepeticoes;
         }
       } catch (error) {
+        // eslint-disable-next-line
         console.log(error);
       }
     },
@@ -355,7 +355,6 @@ export default {
       this.tamQuadro = this.tamQuadroInicial;
 
       while (etiquetas > 0) {
-        console.log('e', etiquetas);
         const quadro = new Array(this.tamQuadro);
         this.nTotalSlots += this.tamQuadro;
 
