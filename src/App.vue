@@ -19,6 +19,7 @@
       <div class="row w-100" v-if="mostrarGraficoNTotalSlots">
           <GraficoNTotalSlots :series="serieNTotalSlots" />
       </div>
+    </div>
 
     <div class="my-body mx-5 d-flex justify-content-center mt-3">
       <div class="row w-100" v-if="mostrarGraficoNTotalSlotsVazios">
@@ -36,7 +37,6 @@
       <div class="row w-100" v-if="mostrarGraficoTempoMedioExecucao">
         <GraficoTempoMedioExecucao :series="serieTempoMedioExecucao" />
       </div>
-    </div>
     </div>
   </div>
 </template>
